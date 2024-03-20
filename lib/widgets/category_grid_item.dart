@@ -10,7 +10,12 @@ class CategoryGridItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: (){const MealsScreen();},
+      onTap: (){
+        Navigator.of(context).push(
+          MaterialPageRoute(
+              builder: (ctx)=>const MealsScreen(),)
+        );
+      },
       splashColor: Theme.of(context).primaryColor,
       borderRadius: BorderRadius.circular(16),
 
